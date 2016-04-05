@@ -813,8 +813,11 @@ body
     padding-top: 10px;
     padding-left: 10px;
     text-align: center;
+    width: 100%;
 }
 .websites_content td{
+    line-height: 38px;
+    float: left;
     border-radius: 10px;
     width: 25%;
     height: 50px;
@@ -958,6 +961,10 @@ body
     text-align: center;
 
 
+}
+.main_archive_div{
+    left:3%;
+    width: 70%;
 }
 }
 
