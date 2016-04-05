@@ -1,0 +1,35 @@
+
+<% include header.ejs%>
+<div class="father">
+<div class="right">
+	
+
+	
+
+	<div class="archives">
+		<div class="archives_title">
+			<h2>Archives</h2>
+		</div>
+		<div class="archives_content">
+			<ul>
+				<% cat.forEach(function(cat,index){ %>
+					<li><a href="/archives/<%= cat.time%>"><%= cat.time  %> 
+					<sup><%= cat.nums%></sup>
+						 
+					</a></li>
+				<% })%>
+			</ul>
+			
+		</div>
+	</div>
+
+	<div class="tags">
+		
+	</div>
+</div><!-- right 结束 -->
+<div class="main main_archive_div">
+	<% include main_archives.ejs%>
+</div>
+</div>
+
+<% include footer.ejs%>

@@ -1,0 +1,35 @@
+<div class="comments">
+		
+	
+		<div class="comments_list">
+			<h2 class="comments_nums"><%= comments.length%> Comments</h2>
+			<% comments.forEach(function(comment,index){ %>
+				<div class="comments_content ">
+					<img src="/images/c_icon_1.png" alt="用户头像" class="fl"><!-- 左侧评论区 结束-->
+					<div class="comments_right fl">
+						 <h2><%= comment.user %></h2>
+
+						 <p class="time fr"><%= comment.time %></p>
+						 <p class="content"><%= comment.post %></p>
+					</div><!-- 右侧评论区 结束-->
+					<div class="clearfix"></div>
+				</div><!-- 单条评论 结束-->
+
+			<% })%>
+		</div><!-- 评论list 结束-->
+		
+		<div class="comments_input">
+				<h1>发表哲♂学的评论</h1>
+				<form method="post" action="/post"  id="comment_form" onsubmit="return validate_code();" >
+					<label for="input_name" class="name_label">姓名*</label>
+					<input type="text" id="input_name" name="input_name">
+					<label for="input_comment" class="comment_label">评论*</label>
+					<textarea type="text" id="input_comment" name="input_comment" placeholder="请不要进行XSS测试/攻击TAT"></textarea>
+					
+					<input type="hidden" id="input_id" name="input_id">
+					
+					<input type="submit" name="submit1" id="submit1" value="提交"  >
+				</form>
+		</div>
+		
+</div><!-- 评论版块 结束 -->

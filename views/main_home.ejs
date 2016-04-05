@@ -1,0 +1,47 @@
+<div class="main_home">
+	<div id="main_home_container">
+		<% acts.forEach(function(act,index){ %>
+			<div class="main_home_article">
+				<h1 class="title"><a href="/article/<%= act.id%>"><%= act.name%></a></h1>
+				<span class="icon-calendar"></span>
+				<span class="date"><%= act.id.substring(0,10)%></span>
+				<span class="icon-books"></span>
+				<span class="cat"><%= act.cat%></span>
+				<div class="main_home_content">
+					
+					<%- act.route_short%>
+
+				</div>
+				<a href="/article/<%= act.id%>" class="more">Read More</a>
+				<div class="line"></div>
+			</div>
+
+		<% })%>
+		
+
+
+	</div>
+	
+	
+
+	<div class="page">
+		<a href="/">首页</a>
+
+        <a href="#" onclick="prevPage();" id="prevPage">&lt;</a>
+
+        <% var page = Math.ceil(article.length/6); if(page>3){page=3;} for(var i = 0;i< page;i++){%>
+
+			<a href="/page/<%= i+1 %>" class="pageNumber" onclick="goToPage(<%= i+1%>);"><%= i+1 %></a>
+
+        <%}%>
+		
+
+		
+		
+<a href="#" onclick="nextPage();" id="nextPage">&gt;</a>
+		
+		
+
+        <a href="/page/<%= Math.ceil(article.length/6)%>">尾页</a>
+	</div>
+</div><!-- main_home 结束 -->

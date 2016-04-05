@@ -1,0 +1,58 @@
+<% include header.ejs%>
+<div class="left">
+
+
+
+	<div class="left_personal_info">
+		<div class="my_info">
+			<img src="../../../images/my_head.png" alt="个人头像" >
+			<h1>Cyberpunk</h1>
+			<h2>Web Developer</h2>
+			<h3><a href="/">
+					<span class="icon-location2"></span>
+				</a>
+
+				HNU,China</h3>
+
+		</div>
+		<div class="post_info fl post_act">
+			<div><%= articles.length%></div>
+			
+			<span>Articles</span>
+		</div>
+		<div class="post_info fl post_categ">
+			<div><%= categ.length%></div>
+			
+			<span>Categories</span>
+		</div>
+		<div class="contact_info">
+			<ul>
+				<li><a href="/">
+					<span class="icon-github"></span>
+				</a></li>
+				<li><a href="/">
+					<span class="icon-twitter"></span>
+				</a></li>
+				<li><a href="/">
+					<span class="icon-facebook"></span>
+				</a></li>
+				<li><a href="/">
+					<span class="icon-sina-weibo"></span>
+				</a></li>
+				<li><a href="/">
+					<span class="icon-rss2"></span>
+				</a></li>
+			</ul>
+		</div>
+	</div><!-- left_personal_info 结束 -->
+	
+	
+
+
+</div><!-- left-main 结束 -->
+<div class="main">
+	<% include main_category.ejs%>
+</div>
+
+<% include right.ejs%>
+<% include footer.ejs%>

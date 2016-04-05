@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title%> | 以理性的眼光看待世界</title>
+	
+	<link rel="shortcut icon" href="/images/my_head.png">
+	<link rel="Bookmark" href="/images/my_head.png">
+	<link rel="stylesheet" href="/stylesheets/main.css">
+	<link rel="stylesheet" href="/stylesheets/reset.css">
+	<link rel="stylesheet" href="/stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="/dist/css/wangEditor.min.css">
+	
+	<link rel="stylesheet" href="/stylesheets/styles/rainbow.css">
+	<style>
+		.wangEditor-container .wangEditor-txt pre {
+  				font-size: 14px;
+  				font-family: Courier, "Courier New","宋体";
+  				text-decoration: none;
+		}	
+	</style>
+	<script type="text/javascript">
+
+
+	</script>
+	
+	
+</head>
+<body>
+	<div class="header">
+		<div class="navBar fl">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/archives">Archives</a></li>
+				<li><a href="/favorites">Favorites</a></li>
+				
+				<li><a href="/about">About</a></li>
+			</ul>
+		</div><!-- navBar 结束 -->
+		<div class="searchBar fr">
+			<form action="" method="post">
+					<input type="text" class="search_text">
+			</form>
+		</div><!-- searchBar 结束 -->
+		<div class="helper">
+			<% if (success) { %>
+	    		<div class="alert alert-success">
+		      		<%= success %>
+		    	</div>
+		    <% } %>
+		    <% if (error) { %>
+		    	<div class="alert alert-danger">
+		      		<%= error %>
+		    	</div>
+	    	<% } %>
+		</div>
+	</div>
+	<!-- header 结束 -->
+	
+
+		
+	
+	
+	

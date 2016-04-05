@@ -1,0 +1,45 @@
+<% include header.ejs%>
+
+
+<div class="main center">
+	<div class="edit">
+	<div class="edit-article">
+		<% if(state == "old") {%>
+		<input type="text" id="article_title" name="article_title" placeholder="请输入文章标题" value="<%= article.name%>">
+		<%}else{ %>
+		<input type="text" id="article_title" name="article_title" placeholder="请输入文章标题" >
+		<% }%>	
+		<select name="article_categ" id="article_categ"> 
+			<% drops.forEach(function(drop,i){ %>
+			<option value="<%= drop.name %>"><%= drop.name%></option>   
+			<%	})%>  
+	        
+           
+      </select> 
+        <input type="text" id="categ_add" name="categ_add" placeholder="请输入添加的分类">
+        <input type="button" id="categ_add_button" name="categ_add_button" value="Add" onclick="return add_categ();">
+		<div id="edit-area">
+			<% if(state == "old") {%>
+			<%- article.route%>
+			<%}else{ %>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ex nam, officiis quasi quis assumenda similique delectus in quas nemo libero laboriosam tempore dolor, doloribus eligendi odio. Quisquam, aperiam suscipit?
+			</p>
+			<% }%>
+	    	
+		</div>
+		<input type="button" name="submit4" value="提交" onclick="return validate_article();" >
+
+	</div>
+	
+	
+
+
+	</div><!-- 编辑区 结束 -->
+</div>
+
+
+
+
+
+
+<% include footer.ejs%>

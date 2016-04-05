@@ -1,0 +1,30 @@
+<div class="article">
+	<div class="article_header">
+		<h1 class="title">
+			<a href="/article/<%= article.id%>"><%= article.name%></a>
+			<span class="icon-enlarge2 fr fullscrenn" onclick="fullScreen();"></span>
+		</h1>
+
+		<div class="article_info">
+			<span class="icon-calendar icon"></span>
+			<span class="date"><%= article.id.substring(0,10)%></span>
+			<span class="icon-books icon"></span>
+			<a class="categ" href="/category/<%= article.cat%>"><%= article.cat   %></a>
+			<% if(user){%>
+			<a href="../edit/<%= article.id%>" class="edit_old ">编辑文章</a>
+			<%}%>
+		</div>
+			
+			
+
+	
+		
+	</div>
+	
+	
+	<div class="article_content">
+		<%- article.route %>
+	</div>
+
+	
+</div>
