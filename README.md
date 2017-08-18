@@ -1,4 +1,4 @@
-# YffBlog-1
+# My-Blog-1st
 个人博客，前端独立开发，后端由Express框架搭建
 
 两周左右，Node.js的Express框架 + 前端 完成了这个博客。
